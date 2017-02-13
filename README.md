@@ -2,4 +2,6 @@
 
 Welcome to my website
 
-[Click Here](http://benjamin-davies.github.io/hpbd2me)
+## Math
+Math is a repository all based on math.
+[View more...](https://benjamin-davies.github.io/math/)
