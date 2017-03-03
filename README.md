@@ -10,3 +10,7 @@ Math is a repository all based on math.
 ## DeskCup
 DeskCup is a game that makes fun of the competition between Windows, OSX and Linux based operating systems.
 [View more...](https://benjamin-davies.github.io/desk-cup)
+
+## Maze Generator
+This is just a quick depth first search implementation.
+[Generate](https://benjamin-davies.github.io/maze-generator/)
