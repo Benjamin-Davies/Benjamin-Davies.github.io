@@ -1,28 +1,21 @@
-<!DOCTYPE html>
+# Creative Commons Resources Links
 
-<html>
-<head>
- 
-</head>
-<body>
- <h1>Sounds For Projects</h1>
- <a href="http://soundplant.org/">SoundPlant Keyboard Piano</a><br/>
- <a href="http://www.philharmonia.co.uk/explore/make_music/">Phiilharmonia Orchestra Sounds</a><br/>
- <a href="http://freesound.org/">Freesound.org</a><br/>
- <a href="http://www.soundjay.com/">SoundJay</a><br/>
- <a href="http://www.soundeffectsplus.com/">Sound Effects+</a><br/>
- <a href="http://www.freeplaymusic.com/">Freeplay Music</a><br/>
- <a href="http://www.ccmixter.org/">CC Mixter</a><br/>
- <a href="http://www.jamendo.com/?language=en">Jamendo</a>
+## Sounds For Projects
+- [SoundPlant Keyboard Piano](http://soundplant.org/)
+- [Phiilharmonia Orchestra Sounds](http://www.philharmonia.co.uk/explore/make_music/)
+- [Freesound.org](http://freesound.org/)
+- [SoundJay](http://www.soundjay.com/)
+- [Sound Effects+](http://www.soundeffectsplus.com/)
+- [Freeplay Music](http://www.freeplaymusic.com/)
+- [CC Mixter](http://www.ccmixter.org/)
+- [Jamendo](http://www.jamendo.com/?language=en)
 
- <h1>Images For Projects</h1>
- <a href="http://photosforclass.com/">Photos For Class</a><br/>
- <a href="http://flickr.com/creativecommons">Flickr</a><br/>
- <a href="http://wikimedia.org/">Wikimedia Commons</a>
+## Images For Projects
+- [Photos For Class](http://photosforclass.com/)
+- [Flickr](http://flickr.com/creativecommons)
+- [Wikimedia Commons](http://wikimedia.org/)
 
- <h1>Online Image Editors</h1>
- <a href="http://www.gimp.org/">GIMP</a><br/>
- <a href="http://www.fotoflexer.com/">Fotoflexer</a><br/>
- <a href="http://www.pixlr.com/">Pixlr</a>
-</body>
-</html>
+## Online Image Editors
+- [GIMP](http://www.gimp.org/)
+- [Fotoflexer](http://www.fotoflexer.com/)
+- [Pixlr](http://www.pixlr.com/)
