@@ -64,6 +64,7 @@ header {
 
 .showcase {
   background: $dark $showcase-background no-repeat;
+  background-size: cover;
   color: $main-text;
   min-height: 400px;
   text-align: center;
