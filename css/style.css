@@ -65,12 +65,33 @@ header {
     .boxes .box img {
       height: 90px; }
 
+.main-col {
+  border: 2px solid #00f;
+  float: left;
+  margin: 10px 0;
+  padding: 15px;
+  width: 80%; }
+  .main-col li {
+    margin-left: 10px;
+    text-indent: 5px; }
+
+.light {
+  background-color: #d3d3dd; }
+
+.dark {
+  background-color: #35424a;
+  color: #fff; }
+  .dark a {
+    color: #adf; }
+
 footer {
   background-color: #00f;
   color: #fff;
   margin-top: 20px;
   padding: 20px;
   text-align: center; }
+  footer a {
+    color: #adf; }
 
 @media (max-width: 768px) {
   header {
@@ -91,8 +112,10 @@ footer {
     float: none;
     text-align: center;
     width: 100%; }
+  .container,
   .main-col {
     float: none;
+    margin: 10px 0;
     text-align: center;
     width: 100%; }
   .showcase h1 {

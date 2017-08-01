@@ -1,13 +1,14 @@
 // Variables
 $main-text: #fff;
-$main-text-background: #adf;
+$main-background: #adf;
+$light: #d3d3dd;
 $dark: #35424a;
 $accent: #00f;
 $showcase-accent: #0a0;
 $showcase-background: url('../img/showcase.png');
 
 body {
-  background-color: $main-text-background;
+  background-color: $main-background;
   font: 10px/1.5 Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -101,12 +102,42 @@ header {
   }
 }
 
+.main-col {
+  border: 2px solid $accent;
+  float: left;
+  margin: 10px 0;
+  padding: 15px;
+  width: 80%;
+
+  li {
+    margin-left: 10px;
+    text-indent: 5px;
+  }
+}
+
+.light {
+  background-color: $light;
+}
+
+.dark {
+  background-color: $dark;
+  color: $main-text;
+
+  a {
+    color: $main-background;
+  }
+}
+
 footer {
   background-color: $accent;
   color: $main-text;
   margin-top: 20px;
   padding: 20px;
   text-align: center;
+
+  a {
+    color: $main-background;
+  }
 }
 
 @media(max-width: 768px) {
@@ -140,8 +171,10 @@ footer {
     }
   }
 
+  .container,
   .main-col {
     float: none;
+    margin: 10px 0;
     text-align: center;
     width: 100%;
   }
