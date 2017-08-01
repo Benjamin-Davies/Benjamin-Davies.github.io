@@ -1,0 +1,72 @@
+body {
+  background-color: #adf;
+  font: 10px/1.5 Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  width: 80%; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #35424a;
+  border-bottom: #00f 3px solid;
+  color: #fff;
+  min-height: 70px;
+  padding-top: 30px; }
+  header a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase; }
+  header li {
+    display: inline;
+    padding: 0 20px; }
+  header .branding {
+    float: left; }
+    header .branding h1 {
+      margin: 0; }
+  header nav {
+    float: right;
+    margin-top: 10px; }
+  header .current {
+    color: #00f;
+    font-weight: bold; }
+
+.showcase {
+  background: #35424a url("../img/showcase.png") no-repeat;
+  color: #fff;
+  min-height: 400px;
+  text-align: center; }
+  .showcase h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    margin-top: 100px; }
+  .showcase p {
+    font-size: 20px; }
+
+.boxes {
+  color: #35424a;
+  margin-top: 20px; }
+  .boxes a {
+    color: #35424a; }
+  .boxes .box {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 30%; }
+    .boxes .box img {
+      height: 90px; }
+
+footer {
+  background-color: #00f;
+  color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center; }

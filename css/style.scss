@@ -1,0 +1,109 @@
+// Variables
+$main-text: #fff;
+$main-text-background: #adf;
+$dark: #35424a;
+$accent: #00f;
+$showcase-accent: #0a0;
+$showcase-background: url('../img/showcase.png');
+
+body {
+  background-color: $main-text-background;
+  font: 10px/1.5 Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  width: 80%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $dark;
+  border-bottom: $accent 3px solid;
+  color: $main-text;
+  min-height: 70px;
+  padding-top: 30px;
+
+  a {
+    color: $main-text;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  li {
+    display: inline;
+    padding: 0 20px;
+  }
+
+  .branding {
+    float: left;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  nav {
+    float: right;
+    margin-top: 10px;
+  }
+
+  .current {
+    color: $accent;
+    font-weight: bold;
+  }
+}
+
+.showcase {
+  background: $dark $showcase-background no-repeat;
+  color: $main-text;
+  min-height: 400px;
+  text-align: center;
+
+  h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.boxes {
+  color: $dark;
+  margin-top: 20px;
+
+  a {
+    color: $dark;
+  }
+
+  .box {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 30%;
+
+    img {
+      height: 90px;
+    }
+  }
+}
+
+footer {
+  background-color: $accent;
+  color: $main-text;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
