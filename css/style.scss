@@ -108,3 +108,47 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+@media(max-width: 768px) {
+  header {
+    padding-bottom: 20px;
+
+    .branding {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    nav {
+      float: none;
+      text-align: center;
+      width: 100%;
+
+      li {
+        float: none;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .boxes {
+    .box {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .main-col {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .showcase {
+    h1 {
+      margin-top: 40px;
+    }
+  }
+}
