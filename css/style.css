@@ -94,11 +94,16 @@ header {
 .portfolio .project {
   border: 1px solid #00f;
   text-align: center; }
+  .portfolio .project a {
+    text-decoration: none; }
   .portfolio .project:nth-child(odd) {
-    background: #35424a;
-    color: #fff; }
+    background: #35424a; }
+    .portfolio .project:nth-child(odd) a {
+      color: #fff; }
   .portfolio .project:nth-child(even) {
     background: #d3d3dd; }
+    .portfolio .project:nth-child(even) a {
+      color: #000; }
   .portfolio .project.large {
     grid-column: span 2;
     grid-row: span 2; }

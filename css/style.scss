@@ -3,6 +3,7 @@ $main-text: #fff;
 $main-background: #adf;
 $light: #d3d3dd;
 $dark: #35424a;
+$dark-text: #000;
 $accent: #00f;
 $showcase-accent: #0a0;
 $showcase-background: url('../img/showcase.png');
@@ -141,13 +142,24 @@ header {
     border: 1px solid $accent;
     text-align: center;
 
+    a {
+      text-decoration: none;
+    }
+
     &:nth-child(odd) {
       background: $dark;
-      color: $main-text;
+
+      a {
+        color: $main-text;
+      }
     }
 
     &:nth-child(even) {
       background: $light;
+
+      a {
+        color: $dark-text;
+      }
     }
 
     &.large {
