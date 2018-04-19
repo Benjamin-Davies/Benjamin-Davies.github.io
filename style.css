@@ -1,0 +1,16 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5rem;
+}
+
+.fork-icon {
+  font-size: 1em;
+  padding-left: 0.5em;
+}
+
+@media (max-width: 992px) {
+  .project-grid {
+    display: block;
+  }
+}
