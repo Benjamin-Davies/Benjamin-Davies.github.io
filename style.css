@@ -1,3 +1,11 @@
+main {
+  min-height: 100vh;
+}
+
+section {
+  padding-bottom: 5em;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
