@@ -14,44 +14,58 @@ fetch(`https://api.github.com/users/${username}/repos`, {
       progress.classList.add('hide');
     });
 
-    repos.slice(0, 6).forEach(function(repo) {
-      var card = document.createElement('div');
-      card.className = 'card';
-      projects.appendChild(card);
+    repos
+      .sort(function(x, y) {
+        var a = new Date(x.updated_at);
+        var b = new Date(y.updated_at);
 
-      var content = document.createElement('div');
-      content.className = 'card-content';
-      card.appendChild(content);
+        if (a > b) {
+          return -1;
+        } else if (a < b) {
+          return 1;
+        } else {
+          return 0;
+        }
+      })
+      .slice(0, 6)
+      .forEach(function(repo) {
+        var card = document.createElement('div');
+        card.className = 'card';
+        projects.appendChild(card);
 
-      var title = document.createElement('span');
-      title.className = 'card-title';
-      title.innerText = repo.name;
-      content.appendChild(title);
+        var content = document.createElement('div');
+        content.className = 'card-content';
+        card.appendChild(content);
 
-      if (repo.fork) {
-        var fork = document.createElement('span');
-        fork.className = 'octicon octicon-repo-forked fork-icon';
-        title.appendChild(fork);
-      }
+        var title = document.createElement('span');
+        title.className = 'card-title';
+        title.innerText = repo.name;
+        content.appendChild(title);
 
-      var desc = document.createElement('p');
-      desc.innerText = repo.description;
-      content.appendChild(desc);
+        if (repo.fork) {
+          var fork = document.createElement('span');
+          fork.className = 'octicon octicon-repo-forked fork-icon';
+          title.appendChild(fork);
+        }
 
-      var action = document.createElement('div');
-      action.className = 'card-action';
-      card.appendChild(action);
+        var desc = document.createElement('p');
+        desc.innerText = repo.description;
+        content.appendChild(desc);
 
-      var repo_link = document.createElement('a');
-      repo_link.href = repo.html_url;
-      repo_link.innerText = 'repository';
-      action.appendChild(repo_link);
+        var action = document.createElement('div');
+        action.className = 'card-action';
+        card.appendChild(action);
 
-      if (repo.homepage) {
-        var home_link = document.createElement('a');
-        home_link.href = repo.homepage;
-        home_link.innerText = 'homepage';
-        action.appendChild(home_link);
-      }
-    });
+        var repo_link = document.createElement('a');
+        repo_link.href = repo.html_url;
+        repo_link.innerText = 'repository';
+        action.appendChild(repo_link);
+
+        if (repo.homepage) {
+          var home_link = document.createElement('a');
+          home_link.href = repo.homepage;
+          home_link.innerText = 'homepage';
+          action.appendChild(home_link);
+        }
+      });
   });
