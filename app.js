@@ -37,6 +37,19 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         content.className = 'card-content';
         card.appendChild(content);
 
+        var updatedDate = new Date(repo.updated_at);
+        var updatedString;
+        if (updatedDate.toDateString() === new Date().toDateString()) {
+          updatedString = updatedDate.toLocaleTimeString();
+        } else {
+          updatedString = updatedDate.toLocaleDateString();
+        }
+
+        var updated = document.createElement('div');
+        updated.className = 'right';
+        updated.innerText = updatedString;
+        content.appendChild(updated);
+
         var title = document.createElement('span');
         title.className = 'card-title';
         title.innerText = repo.name;
