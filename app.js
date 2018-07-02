@@ -1,5 +1,5 @@
 var projects = document.getElementById('projects');
-var username = 'Benjamin-Davies';
+var username = window.username || 'Benjamin-Davies';
 
 fetch(`https://api.github.com/users/${username}/repos`, {
   headers: { Accept: 'application/vnd.github.v3+json' }
