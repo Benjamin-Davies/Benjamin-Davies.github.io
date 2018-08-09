@@ -63,6 +63,11 @@ h6 {
   font-weight: 600;
 }
 
+.btn-large {
+  margin: 2rem 0;
+  width: 20rem;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,5 +87,9 @@ h6 {
 @media (max-width: 992px) {
   .project-grid {
     display: block;
+  }
+
+  .btn-large {
+    width: 100%;
   }
 }
