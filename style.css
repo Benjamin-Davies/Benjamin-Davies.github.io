@@ -26,6 +26,10 @@ footer a {
   color: #f5f5f5;
 }
 
+.footer-copyright {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.08)) !important;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
