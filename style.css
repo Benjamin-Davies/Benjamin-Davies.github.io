@@ -55,6 +55,11 @@ h6 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transform-origin: 25% center;
+}
+
+.card:nth-child(even) {
+  transform-origin: 75% center;
 }
 
 .card-content {
@@ -91,6 +96,10 @@ h6 {
 @media (max-width: 992px) {
   .project-grid {
     display: block;
+  }
+
+  .card {
+    transform-origin: center !important;
   }
 
   .btn-large {

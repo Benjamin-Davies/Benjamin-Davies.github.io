@@ -81,4 +81,6 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           action.appendChild(home_link);
         }
       });
+
+    updateParallax();
   });
