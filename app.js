@@ -27,7 +27,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           return 0;
         }
       })
-      .slice(0, 6)
+      .slice(0, 10)
       .forEach(function(repo) {
         var card = document.createElement('div');
         card.className = 'card';
