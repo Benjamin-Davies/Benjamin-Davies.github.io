@@ -15,12 +15,9 @@ function updateParallax() {
     const value = Math.max((offset / window.innerHeight) * 4 - 3, 0);
 
     if (value === 0) {
-      card.style.removeProperty('transform');
+      card.style.removeProperty('--parallax-value');
     } else {
-      card.style.setProperty(
-        'transform',
-        `scale(${1 - value * 0.1}) translate(0, ${value * 5}vh)`
-      );
+      card.style.setProperty('--parallax-value', value.toString());
     }
   }
 }

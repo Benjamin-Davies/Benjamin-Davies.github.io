@@ -46,20 +46,25 @@ h6 {
 .card,
 .card-action,
 .btn-large {
-  box-shadow: 0 0.2rem 0.6rem 0 #2196f3;
+  --parallax-value: 0;
+  box-shadow: 0 0.2rem 1rem 0 #2196f3;
+  box-shadow: 0 calc((1 - var(--parallax-value)) * 0.2rem)
+    calc((1 - var(--parallax-value)) * 1rem) 0 #2196f3;
   border: none;
   border-radius: 1rem !important;
+  transform: scale(calc(1 - var(--parallax-value) * 0.2))
+    translate(0, calc(var(--parallax-value) * 5vh));
 }
 
 .card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transform-origin: 25% center;
+  transform-origin: left center;
 }
 
 .card:nth-child(even) {
-  transform-origin: 75% center;
+  transform-origin: right center;
 }
 
 .card-content {
