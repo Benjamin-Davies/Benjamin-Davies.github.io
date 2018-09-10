@@ -1,4 +1,5 @@
 document.addEventListener('scroll', updateParallax);
+window.addEventListener('resize', updateParallax);
 
 updateParallax();
 
