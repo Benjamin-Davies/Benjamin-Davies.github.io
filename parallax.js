@@ -4,6 +4,7 @@ window.addEventListener('resize', updateParallax);
 updateParallax();
 
 function updateParallax() {
+  /**@type {NodeListOf<HTMLElement>} */
   const cards = document.querySelectorAll('.card, .btn-large');
 
   for (const card of cards) {
