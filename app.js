@@ -27,10 +27,12 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           return 0;
         }
       })
-      .slice(0, 10)
       .forEach(function(repo) {
         var card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'card ' + 'mmwl'[Math.floor(4 * Math.random())];
+        card.style.backgroundColor = `hsl(${Math.floor(
+          360 * Math.random()
+        )}, 100%, 50%)`;
         projects.appendChild(card);
 
         var content = document.createElement('div');
@@ -81,6 +83,4 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           action.appendChild(home_link);
         }
       });
-
-    updateParallax();
   });
