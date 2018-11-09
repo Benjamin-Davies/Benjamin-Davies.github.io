@@ -8,11 +8,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
     return res.json();
   })
   .then(function(repos) {
-    Array.from(projects.getElementsByClassName('progress')).forEach(function(
-      progress
-    ) {
-      progress.classList.add('hide');
-    });
+    document.querySelector('.progress-wrapper').classList.add('hide');
 
     repos
       .sort(function(x, y) {
@@ -29,7 +25,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
       })
       .forEach(function(repo) {
         var card = document.createElement('div');
-        card.className = 'card ' + 'mmwl'[Math.floor(4 * Math.random())];
+        card.className = 'card ' + randFrom('mmmmmmmwwl');
         card.style.backgroundColor = `hsl(${Math.floor(
           360 * Math.random()
         )}, 100%, 50%)`;
@@ -84,3 +80,10 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         }
       });
   });
+
+/**
+ * @param {any[] | string} arr
+ */
+function randFrom(arr) {
+  return arr[Math.floor(arr.length * Math.random())];
+}
