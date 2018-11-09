@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   background: #333;
+  margin: 0;
 }
 
 .progress-wrapper {
@@ -161,6 +162,18 @@ body {
 .btn-large:hover,
 .btn-large:active {
   box-shadow: 0 10px 40px #000;
+}
+
+footer {
+  color: #aaa;
+  background: linear-gradient(transparent, #000);
+  margin-top: 5em;
+  padding: 3em 0;
+}
+
+footer a,
+.footer-copyright {
+  color: #ccc;
 }
 
 .container {
