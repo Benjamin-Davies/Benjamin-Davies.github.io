@@ -128,7 +128,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  transition: 0.1s text-shadow, 0.1s box-shadow;
+  transition: text-shadow 0.2s, box-shadow 0.2s;
 }
 
 .card-action a:last-child {
@@ -143,6 +143,24 @@ body {
 .card-action a:last-child:hover {
   text-shadow: none;
   box-shadow: 1px 3px 5px #333;
+}
+
+.btn-large {
+  display: inline-block;
+  box-shadow: 0 5px 20px #000;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+  color: white;
+  background: linear-gradient(#55f, #00a);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: box-shadow 0.3s;
+}
+
+.btn-large:hover,
+.btn-large:active {
+  box-shadow: 0 10px 40px #000;
 }
 
 .container {
