@@ -4,6 +4,34 @@ body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+  font-size: 6vmin;
+  color: #ddd;
+  background: #555;
+  box-shadow: 0 20px 50px #000;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em 2em;
+}
+
+header h1 {
+  margin: 0;
+}
+
+@media (min-width: 720px) {
+  header {
+    position: fixed;
+    top: 1em;
+    left: -2em;
+    font-size: 1em;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+}
+
 .progress-wrapper {
   margin: 3em;
 }
