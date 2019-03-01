@@ -29,7 +29,7 @@ h1 {
 
 body {
   min-height: 100vh;
-  background: url("mt-ruapehu.jpg") no-repeat;
+  background: url("mt-ruapehu.jpg") no-repeat, #002b36;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
