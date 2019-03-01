@@ -26,9 +26,6 @@ fetch(`https://api.github.com/users/${username}/repos`, {
       .forEach(function(repo) {
         var card = document.createElement('div');
         card.className = 'card ' + randFrom('mmmmmmmwwl');
-        card.style.backgroundColor = `hsl(${Math.floor(
-          360 * Math.random()
-        )}, 100%, 50%)`;
         projects.appendChild(card);
 
         var content = document.createElement('div');
