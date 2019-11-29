@@ -82,7 +82,7 @@ header {
 .card-title {
   color: #93a1a1;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 .card-title .octicon {
   margin-left: 1rem;
