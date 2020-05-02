@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 
 /* Reset */
 * {
@@ -14,15 +14,21 @@
   --dark-text: #000;
   --normal-text: #333;
   --light-text: #777;
-  --shadow: #aaa;
+  --shadow: #000a;
+  --font-a: 'Roboto Mono', sans-serif;
+  --font-b: 'Roboto', sans-serif;
 }
 
 /* Layout and Components */
 header,
 .container {
-  margin: 3rem auto;
+  margin: 5rem auto;
   max-width: 1024px;
   width: 90%;
+}
+
+header h1 {
+  margin-bottom: 0.7em;
 }
 
 .contact {
@@ -49,9 +55,6 @@ header,
   border-radius: calc(var(--size) / 2);
   box-sizing: border-box;
 
-  /*animation-name: fade-in;
-  animation-duration: 3s;
-  animation-iteration-count: 1;*/
   animation: fade-in 3s, spin 1s infinite;
   animation-timing-function: ease, linear;
 }
@@ -120,24 +123,24 @@ footer .container {
 
 /* Typography */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-a);
   color: var(--normal-text);
 }
 
 header {
+  font-family: var(--font-b);
   font-size: 1.5rem;
 }
 
 header h1 {
   color: var(--dark-text);
-  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-decoration: underline;
   text-decoration-color: var(--accent);
 }
 
 .contact {
-  color: var(--light-text);
+  font-family: var(--font-a);
   font-size: 1.1rem;
 }
 .contact a {
@@ -163,9 +166,12 @@ header h1 {
   content: 'updated ';
 }
 
-a {
-  color: var(--normal-text);
+.card-action a {
   text-decoration: none;
+}
+
+a {
+  color: var(--accent-dark);
   text-transform: uppercase;
 }
 a:focus {
