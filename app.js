@@ -1,5 +1,6 @@
 var projects = document.getElementById('projects');
 var username = window.username || 'Benjamin-Davies';
+var projectCount = window.projectCount || 8;
 
 fetch(`https://api.github.com/users/${username}/repos`, {
   headers: { Accept: 'application/vnd.github.v3+json' }
@@ -22,6 +23,9 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         } else {
           return 0;
         }
+      })
+      .filter(function (_, i) {
+        return i < projectCount;
       })
       .forEach(function(repo) {
         var card = document.createElement('div');
