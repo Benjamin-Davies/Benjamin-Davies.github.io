@@ -29,7 +29,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
       })
       .forEach(function(repo) {
         var card = document.createElement('div');
-        card.className = 'card ' + randFrom('mmmmmmmwwl');
+        card.className = 'card';
         projects.appendChild(card);
 
         var content = document.createElement('div');
@@ -81,10 +81,3 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         }
       });
   });
-
-/**
- * @param {any[] | string} arr
- */
-function randFrom(arr) {
-  return arr[Math.floor(arr.length * Math.random())];
-}
