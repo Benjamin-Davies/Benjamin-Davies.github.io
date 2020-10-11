@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  --cobalt-background: #1E3548;
+  --cobalt-foreground: #9DDEE0;
 }
 
 .main-column {
@@ -18,4 +20,13 @@ h1 {
 
 p {
   margin: 0.5em 0;
+}
+
+body.cobalt {
+  background-color: var(--cobalt-background);
+  color: var(--cobalt-foreground);
+}
+
+body.full-height {
+  height: 100%;
 }
