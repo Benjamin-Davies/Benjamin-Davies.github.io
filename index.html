@@ -20,9 +20,9 @@
     </header>
   
     <section>
-      <p>
-        <em>Content coming soon&hellip;</em>
-      </p>
+      <ul id="indexList">
+        <em>Loading&hellip;</em>
+      </ul>
     </section>
   
     <footer>
@@ -35,5 +35,35 @@
       </p>
     </footer>
   </div>
+
+  <script type="module">
+    import { isGithub, titleCase } from './shared.js';
+
+    const indexList = document.getElementById('indexList');
+    fetch('index.txt')
+      .then(res => res.text())
+      .then(text => {
+        indexList.children[0].remove();
+
+        const files = text.split('\n');
+        for (const file of files) {
+          if (!file || file === 'index.html') {
+            continue;
+          }
+          const match = file.match(/^(.*)\.html$/);
+          if (!match) {
+            continue;
+          }
+          const short = match[1];
+          const display = titleCase(short);
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.textContent = display;
+          a.href = isGithub ? short : file;
+          li.appendChild(a);
+          indexList.appendChild(li);
+        }
+      });
+  </script>
 </body>
 </html>
