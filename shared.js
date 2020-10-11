@@ -16,3 +16,11 @@ export function capitalize(str) {
 export function titleCase(str) {
   return str.split(/[\s_-]/g).map(capitalize).join(' ');
 }
+
+export function registerSW() {
+  if ('serviceWorker' in navigator && isGithub) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+}

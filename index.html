@@ -39,7 +39,9 @@
   </div>
 
   <script type="module">
-    import { isGithub, titleCase } from './shared.js';
+    import { isGithub, titleCase, registerSW } from './shared.js';
+
+    registerSW();
 
     const indexList = document.getElementById('indexList');
     fetch('index.txt')
