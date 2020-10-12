@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans-serif;
   --cobalt-background: #1E3548;
   --cobalt-foreground: #9DDEE0;
 }
@@ -22,11 +23,26 @@ p {
   margin: 0.5em 0;
 }
 
-body.cobalt {
+.cobalt {
   background-color: var(--cobalt-background);
   color: var(--cobalt-foreground);
 }
 
-body.full-height {
+.full-height,
+.full-height body {
   height: 100%;
+}
+
+.centered-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.centered-column > * {
+  margin-top: 0;
+}
+
+.big-text {
+  font-size: 2em;
 }

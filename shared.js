@@ -24,3 +24,32 @@ export function registerSW() {
     });
   }
 }
+
+/**
+ * @param {number} num
+ * @param {number} chars
+ * @param {number} dp
+ */
+export function padNum(num, chars, dp = 0) {
+  let str = num.toFixed(dp);
+  while (str.length < chars) {
+    str = `0${str}`;
+  }
+  return str;
+}
+
+export const months = [
+  'Zero',
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]

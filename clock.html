@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="full-height">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clock</title>
   <link rel="stylesheet" href="shared.css">
 </head>
-<body class="cobalt full-height">
-  <p>
-    <em>Coming soon&hellip;</em>
-  </p>
+<body class="cobalt centered-column big-text">
+  <h1>
+    <span id="time" class="big-text">00:00</span><span id="secs" style="width: 9rem">:00</span>
+  </h1>
+  <h2>
+    <span id="date">&hellip;</span>
+  </h2>
+
+  <script type="module">
+    import { registerSW, padNum, months } from './shared.js'
+
+    registerSW();
+
+    const timeEl = document.getElementById('time');
+    const secsEl = document.getElementById('secs');
+    const dateEl = document.getElementById('date');
+    function update() {
+      const date = new Date();
+      timeEl.textContent = `${padNum(date.getHours(), 2)}:${padNum(date.getMinutes(), 2)}`
+      secsEl.textContent = `:${padNum(date.getSeconds(), 2)}`;
+      dateEl.textContent = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      requestAnimationFrame(update);
+    }
+    update();
+  </script>
 </body>
 </html>
