@@ -20,11 +20,14 @@ self.addEventListener('fetch', async (event) => {
   const url = new URL(event.request.url);
 
   if (url.origin === location.origin) {
-    if (url.pathname.indexOf('/', 1) === -1 && caches.has(url.pathname)) {
-      event.respondWith(caches.match(url.pathname));
-      await fetchAndCache(url);
-    } else {
-      event.respondWith(await fetchAndCache(event.request, url.pathname));
+    if (url.pathname.indexOf('/', 1) === -1) {
+      const match = await caches.match(url.pathname);
+      if (match) {
+        event.respondWith(match);
+        await fetchAndCache(url);
+      } else {
+        event.respondWith(await fetchAndCache(event.request, url.pathname));
+      }
     }
   }
 });
