@@ -88,6 +88,9 @@ p {
 .big-text {
   font-size: 2em;
 }
+.big-text input {
+  font-size: 1.2rem;
+}
 
 .fade-in {
   animation: 1s fade-in ease-out;
@@ -96,4 +99,10 @@ p {
 @keyframes fade-in {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.two-col-table {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 1em;
 }
