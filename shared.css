@@ -3,6 +3,12 @@ body {
   font-family: sans-serif;
   --cobalt-background: #1E3548;
   --cobalt-foreground: #9DDEE0;
+  --cobalt-secondary: #1F8FF8;
+  --background: white;
+  --foreground: black;
+  --secondary: blue;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .main-column {
@@ -24,8 +30,9 @@ p {
 }
 
 .cobalt {
-  background-color: var(--cobalt-background);
-  color: var(--cobalt-foreground);
+  --background: var(--cobalt-background);
+  --foreground: var(--cobalt-foreground);
+  --secondary: var(--cobalt-secondary);
 }
 
 .full-height,
@@ -41,6 +48,41 @@ p {
 }
 .centered-column > * {
   margin-top: 0;
+}
+
+.back-button {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.back-button::before,
+.back-button::after {
+  display: block;
+  content: '';
+  background-color: var(--secondary);
+  border-radius: 3px;
+  width: 32px;
+  height: 6px;
+  transform-origin: center left;
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 0px #0003;
+}
+.back-button::before {
+  transform: translate(16px, 30px) rotate(-45deg);
+}
+.back-button::after {
+  transform: translate(16px, 21px) rotate(45deg);
+}
+.back-button:hover {
+  opacity: 1;
+}
+.back-button:hover::before,
+.back-button:hover::after {
+  box-shadow: 2px 3px 3px #0003;
 }
 
 .big-text {
