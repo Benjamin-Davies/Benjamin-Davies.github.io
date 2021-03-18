@@ -1,4 +1,5 @@
 clock.html
+code.html
 index.html
 lol.html
 metronome.html

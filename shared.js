@@ -53,3 +53,40 @@ export const months = [
   'November',
   'December',
 ]
+
+/**
+ * @param {any[]} arr
+ */
+export function pickRandom(arr) {
+  const i = Math.floor(arr.length * Math.random());
+  return arr[i];
+}
+
+/**
+ * @param {string} url
+ */
+export async function fetchGitHubAPI(url) {
+  if (!url.startsWith('https://')) {
+    url = 'https://api.github.com' + url;
+  }
+  const res = await fetch(url, {
+    headers: {
+      accept: 'application/vnd.github.v3+json',
+    },
+  });
+  if (!res.ok) {
+    throw new Error(`GitHub API at ${url} failed (${res.status}): ${await res.text()}`);
+  }
+  return await res.json();
+}
+
+/**
+ * @param {number} ms
+ */
+export function delay(ms) {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res();
+    }, ms);
+  });
+}
