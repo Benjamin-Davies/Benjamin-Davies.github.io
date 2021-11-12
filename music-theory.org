@@ -48,7 +48,7 @@ Note the absence of E# / Fb and B# / Cb. There is no black note between E and F,
 - Sharp - a black note named after the white note before it
 - Flat - a black note named after the white note after it
 
-** Side Notes (optional)
+** Extra Detail (optional)
 
 Sharps and flats are called /accidentals/. A white note is called a /natural/.
 
@@ -86,7 +86,7 @@ When we talk about notes in music, we are almost always relating them back to a 
 - Major Scale - the most common scale
 - Key - which scale is used in a song
 
-** Side Notes (optional)
+** Extra Detail (optional)
 
 We call the name (letter and sharp/flat) of a note the /absolute pitch/. We call its relation to the key (or any other notes) its the /relative pitch/.
 
@@ -108,7 +108,7 @@ To name an interval, we count the number of notes in the scale between the two n
   1. two notes played or sung together
   2. the distance between two notes
 
-** Side Notes
+** Extra Detail
 
 It bothers me how, when describing the distance between two notes, we include the first note. It is what it is.
 
@@ -143,7 +143,7 @@ Which key a chord is in does not matter, as long as all of the chords are in the
 
 ** TODO Forming Chords (optional, recommended for piano players)
 
-** Side Notes (optional)
+** Extra Detail (optional)
 
 The root note of a chord is not always the lowest note. This is called an inversion and is outside of the scope of this explanation.
 
