@@ -1,0 +1,68 @@
+#+TITLE: Music Theory
+#+SUBTITLE: The basics of scales, intervals, chords, and capos
+
+* Pitches
+
+A lot of music theory is best explained in terms of the piano keyboard, as each note corresponds to one key, and they are laid out in a way that makes their names easier to remember.
+
+[[https://www.yamaha-keyboard-guide.com/images/piano-keyboard-layout-.jpg]]
+
+/Image from [[https://www.yamaha-keyboard-guide.com/][Yamaha-Keyboard-Guide.com]]/
+
+If we look at a piano keyboard, each key has a different pitch, meaning how high or low the note it makes is. We can name each of the white notes with a letter from A-G, wrapping back round to A one we go past G. When we are listing the notes, we often start on C.
+
+- C
+- D
+- E
+- F
+- G
+- A
+- B
+- C (again)
+
+But what about the black keys? We can name each black note after the white note that comes directly before, or directly after it. If we are naming a black note after the key that precedes it, (the black note comes after the white note) then we add a /sharp/ "#". If we are naming a black note after the key that follows it, (the black note comes before the white note) then we add a /flat/ "b".
+
+- C
+- C# / Db
+- D
+- D# / Eb
+- E
+- F
+- F# / Gb
+- G
+- G# / Ab
+- A
+- A# / Bb
+- B
+- C (again)
+
+C# and Db both refer to the same note, either is correct. Which name you use depends on which makes more sense in context.
+
+Note the absence of E# / Fb and B# / Cb. There is no black note between E and F, or B and C.
+
+** Side Notes (optional)
+
+Sharps and flats are called accidentals. The white notes are called natural.
+
+Whether to use a sharp or a flat depends on what scale we are using. If the note is not in the scale, then we use sharps when we are ascending, and flats when we are descending.
+
+* Steps
+
+A semi-tone is the distance between two notes that are directly next to each other. For example: C and C#; or E and F (because there is no black note between them). This is always represents the same distance between two notes. One semi-tone is equivalent to moving by one fret on the guitar.
+
+A whole-tone is the distance between two notes, skipping the note between then. For example: C, skip C#, D; or E, skip F, F#. This is always represents the same distance between two notes. One whole-tone is the same as moving by two frets on the guitar.
+
+A tone usually refers to the gap between two white notes. For example: C to D; or E to F. These are not always the same distance apart.
+
+* Scales
+
+When we talk about notes in music, we are almost always relating them back to a scale. There are many different types of scales, but the most common one is the Major scale. The only things that your really need to know about scales are:
+
+- The name of a scale comes from the first note in that scale.
+- The C Major scale contains all of the white notes (which is why we usually list the notes starting with C).
+- We often refer to the notes in a scale by their position (eg. G is the fifth note in the C Major scale).
+- The key refers to the scale that the notes in the music are taken from.
+
+** Technical Details (optional)
+
+When I am naming a Major scale, I always prefer to use flats over sharps for the scale name. A scale starting on a flat is always less than or equally as complex to write as the same scale starting on a sharp. This is to avoid double sharps / flats that we end up needing because of more technical rules.
