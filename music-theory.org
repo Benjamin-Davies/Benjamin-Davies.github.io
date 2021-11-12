@@ -54,6 +54,8 @@ Sharps and flats are called /accidentals/. A white note is called a /natural/.
 
 Whether to use a sharp or a flat depends on what scale we are using. If the note is not in the scale, then we use sharps when we are ascending, and flats when we are descending.
 
+** TODO Forming Scales (optional, recommended for piano)
+
 * Steps
 
 A /semi-tone/ is the distance between two notes that are directly next to each other. For example: C and C#; or E and F (because there is no black note between them). This is always represents the same distance between two notes. One semi-tone is equivalent to moving by one fret on the guitar.
@@ -112,7 +114,7 @@ To name an interval, we count the number of notes in the scale between the two n
 
 It bothers me how, when describing the distance between two notes, we include the first note. It is what it is.
 
-** TODO Common harmonies
+** TODO Common Vocal Harmonies
 
 * Chords
 
@@ -120,15 +122,15 @@ A chord is three or more notes played (or sung) at the same time. Like scales, w
 
 A chord can be major or minor. This is called the /quality/ of the chord. Normally, major chords sound happy, and minor chords sound sad. Everything else about a chord except for can normally be ignored and the chord will still sound right.
 
-We can number the chords in a key by taking the chords that start with each note. For example C Major has the following chords:
+We can number the chords in a key by taking the chords that start with each number note. For example C Major has the following chords:
 
-1. C
-2. Dm
+1. C (aka. C Major, Cmaj, or C)
+2. Dm (aka. C Minor or Cmin)
 3. Em
 4. F
 5. G
 6. Am
-7. Bdim
+7. Bdim (don't worry about it, this one is hardly ever used)
 8. C (again)
 
 Which key a chord is in does not matter, as long as all of the chords are in the same key. The /function/ of a chord depends not on its name, but on its number in the key. This means that we can change they key, and as long as the chords move with the key, their /function/ will remain the same.
@@ -138,15 +140,15 @@ Which key a chord is in does not matter, as long as all of the chords are in the
 - Chord - three or more notes played together
 - Chord Progression - a series of chords, played one after the other
 - Root Note - the first note in a chord
-- Quality - if a chord is /major/ (happy) or /minor (sad)
+- Quality - if a chord is /major/ (happy) or /minor/ (sad)
 - Function - the role that a chord plays in a key
 
 ** TODO Forming Chords (optional, recommended for piano players)
 
 ** Extra Detail (optional)
 
-The root note of a chord is not always the lowest note. This is called an inversion and is outside of the scope of this explanation.
+The root note of a chord is not always the lowest note. These chords are called /slash-chords/ or, more properly, /inversions/. The note that is lowest is indicated with a slash "\/". For example: a C Major Chord with the lowest note being an E would be a C/E (say /C slash E/ or /C with base in E/).
 
-We call the chords that only contain notes from a given scale /diatonic/. Notes whose third is not in the key are often used to make the music sound extra energetic (non-diatonic major chords) or extra mellow (non-diatonic minor chords).
+We call the chords that only contain notes from a given scale /diatonic/. Chords whose third is not in the key are often used to make the music sound extra energetic (non-diatonic major chords) or extra mellow (non-diatonic minor chords).
 
 * TODO Capos
