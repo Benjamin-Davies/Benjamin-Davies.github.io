@@ -1,5 +1,5 @@
 #+TITLE: Music Theory
-#+SUBTITLE: The basics of scales, intervals, chords, and capos
+#+SUBTITLE: The basics of scales, chords, and capos
 
 * Pitches
 
@@ -20,7 +20,7 @@ If we look at a piano keyboard, each key has a different pitch, meaning how high
 - B
 - C (again)
 
-But what about the black keys? We can name each black note after the white note that comes directly before, or directly after it. If we are naming a black note after the key that precedes it, (the black note comes after the white note) then we add a /sharp/ "#". If we are naming a black note after the key that follows it, (the black note comes before the white note) then we add a /flat/ "b".
+But what about the black keys? We can name each black note after the white note that comes directly before, or directly after it. If we are naming a black note after the key that precedes it, (the black note comes after the white note) then we add a /sharp/ "#". If we are naming a black note after the key that follows it, (the black note comes before the white note) then we add a /flat/ "b". Now we can list all of the notes:
 
 - C
 - C# / Db
@@ -40,29 +40,113 @@ C# and Db both refer to the same note, either is correct. Which name you use dep
 
 Note the absence of E# / Fb and B# / Cb. There is no black note between E and F, or B and C.
 
+** Terms
+
+- Pitch - how high or low a note is
+- White Note - notes described by a single letter
+- Black Note - all the other notes; those requiring sharps/flats
+- Sharp - a black note named after the white note before it
+- Flat - a black note named after the white note after it
+
 ** Side Notes (optional)
 
-Sharps and flats are called accidentals. The white notes are called natural.
+Sharps and flats are called /accidentals/. A white note is called a /natural/.
 
 Whether to use a sharp or a flat depends on what scale we are using. If the note is not in the scale, then we use sharps when we are ascending, and flats when we are descending.
 
 * Steps
 
-A semi-tone is the distance between two notes that are directly next to each other. For example: C and C#; or E and F (because there is no black note between them). This is always represents the same distance between two notes. One semi-tone is equivalent to moving by one fret on the guitar.
+A /semi-tone/ is the distance between two notes that are directly next to each other. For example: C and C#; or E and F (because there is no black note between them). This is always represents the same distance between two notes. One semi-tone is equivalent to moving by one fret on the guitar.
 
-A whole-tone is the distance between two notes, skipping the note between then. For example: C, skip C#, D; or E, skip F, F#. This is always represents the same distance between two notes. One whole-tone is the same as moving by two frets on the guitar.
+A /whole-tone/ is the distance between two notes, skipping the note between then. For example: C, skip C#, D; or E, skip F, F#. This is always represents the same distance between two notes. One whole-tone is the same as moving by two frets on the guitar.
 
-A tone usually refers to the gap between two white notes. For example: C to D; or E to F. These are not always the same distance apart.
+A /tone/ usually refers to the gap between two white notes. For example: C to D; or E to F. These are not always the same distance apart.
+
+** Terms
+
+- Semi-Tone - two notes right next to each other
+- Whole-Tone - two notes with an extra note in-between
+- Tone - two white notes next to each other
 
 * Scales
 
-When we talk about notes in music, we are almost always relating them back to a scale. There are many different types of scales, but the most common one is the Major scale. The only things that your really need to know about scales are:
+When we talk about notes in music, we are almost always relating them back to a /scale/ or /key/. A /scale/ refers to a list of notes, and a /key/ refers to which group of scales notes can be chosen from, but they are pretty much the same thing. There are many different types of scales, but the most common one is the /major scale/. The only things that your really need to know about scales are:
 
-- The name of a scale comes from the first note in that scale.
-- The C Major scale contains all of the white notes (which is why we usually list the notes starting with C).
+- The name of a key / scale comes from the first note in that scale.
+- When we are talking about major keys, we often leave off the major part, as almost all keys in contemporary christian music are major.
+- The C Major Scale contains all of the white notes (which is why we usually list the notes starting with C).
 - We often refer to the notes in a scale by their position (eg. G is the fifth note in the C Major scale).
-- The key refers to the scale that the notes in the music are taken from.
+- If we take all of the notes in a scale and move them all by the same amount, then the fact that it is a major scale does not change, only the letter (and the sharp or flat) given to that scale changes. For example, if we take C Major, and move it up by a whole-tone, then we get D Major, which is still a major scale.
+  - This idea of shifting pitches around and them staying the same is very important in music. It is the reason why we can change the key of a song, while keeping the same melody and chord progression.
+- We normally try and stay in the same key for the whole song.
 
-** Technical Details (optional)
+** Terms
 
-When I am naming a Major scale, I always prefer to use flats over sharps for the scale name. A scale starting on a flat is always less than or equally as complex to write as the same scale starting on a sharp. This is to avoid double sharps / flats that we end up needing because of more technical rules.
+- Scale - list of notes that "go together"
+- Major Scale - the most common scale
+- Key - which scale is used in a song
+
+** Side Notes (optional)
+
+We call the name (letter and sharp/flat) of a note the /absolute pitch/. We call its relation to the key (or any other notes) its the /relative pitch/.
+
+Changing key part way through a song is called /modulation/. If it is not obvious what the new key is, then this can make the music sound weird.
+
+When I am naming a major scale, I always prefer to use flats over sharps for the scale name. A scale starting on a flat is always less than or equally as complex to write as the same scale starting on a sharp. This is to avoid double sharps / flats that we end up needing because of more technical rules.
+
+* Intervals (optional)
+
+An /interval/ is when two notes are played (or sung) at the same time. It can also refer to the distance between the two notes.
+
+(This section will only explain /diatonic intervals/, that is, intervals who's notes belong to the key being used. To explain what is known as the /quality/ of an interval would require more explaining and an understanding of minor scales.)
+
+To name an interval, we count the number of notes in the scale between the two notes of the interval, including the two notes themselves. For instance, C and F form a /fourth/ because there are four notes between them (C D E F).
+
+** Terms
+
+- Interval
+  1. two notes played or sung together
+  2. the distance between two notes
+
+** Side Notes
+
+It bothers me how, when describing the distance between two notes, we include the first note. It is what it is.
+
+** TODO Common harmonies
+
+* Chords
+
+A chord is three or more notes played (or sung) at the same time. Like scales, we name the chord after its first note, known as the /root note/.
+
+A chord can be major or minor. This is called the /quality/ of the chord. Normally, major chords sound happy, and minor chords sound sad. Everything else about a chord except for can normally be ignored and the chord will still sound right.
+
+We can number the chords in a key by taking the chords that start with each note. For example C Major has the following chords:
+
+1. C
+2. Dm
+3. Em
+4. F
+5. G
+6. Am
+7. Bdim
+8. C (again)
+
+Which key a chord is in does not matter, as long as all of the chords are in the same key. The /function/ of a chord depends not on its name, but on its number in the key. This means that we can change they key, and as long as the chords move with the key, their /function/ will remain the same.
+
+** Terms
+
+- Chord - three or more notes played together
+- Chord Progression - a series of chords, played one after the other
+- Root Note - the first note in a chord
+- Quality - if a chord is /major/ (happy) or /minor (sad)
+- Function - the role that a chord plays in a key
+
+** TODO Forming Chords (optional, recommended for piano players)
+
+** Side Notes (optional)
+
+The root note of a chord is not always the lowest note. This is called an inversion and is outside of the scope of this explanation.
+
+We call the chords that only contain notes from a given scale /diatonic/. Notes whose third is not in the key are often used to make the music sound extra energetic (non-diatonic major chords) or extra mellow (non-diatonic minor chords).
+
+* TODO Capos
