@@ -23,7 +23,7 @@ If we look at a piano keyboard, each key has a different pitch, meaning how high
 But what about the black keys? We can name each black note after the white note that comes directly before, or directly after it. If we are naming a black note after the key that precedes it, (the black note comes after the white note) then we add a /sharp/ "#". If we are naming a black note after the key that follows it, (the black note comes before the white note) then we add a /flat/ "b". Now we can list all of the notes:
 
 - C
-- C# / Db
+- C# / Db (say /C Sharp/ or /D Flat/)
 - D
 - D# / Eb
 - E
