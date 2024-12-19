@@ -1,1 +1,0 @@
-ls *.html > index.txt

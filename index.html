@@ -1,73 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benjamin Davies</title>
-  <link rel="stylesheet" href="shared.css">
-</head>
-<body>
-  <div class="main-column">
-    <header>
-      <h1>Welcome</h1>
-      <p>
-        This website is for fun little HTML toys that I can't be bothered putting in another repo.
-      </p>
-      <p>
-        If you're looking for info about me and what I've been up to, see my
-        <a href="https://github.com/Benjamin-Davies">GitHub Profile</a>.
-      </p>
-    </header>
-  
-    <section>
-      <ul id="indexList">
-        <em>Loading&hellip;</em>
-      </ul>
-    </section>
-  
-    <footer>
-      <p>
-        Don't forget to check out
-        <a href="https://github.com/Benjamin-Davies/Benjamin-Davies.github.io">the code</a>
-        and my
-        <a href="https://github.com/Benjamin-Davies">GitHub Profile</a>.
-      </p>
-      <p>
-        A lot of the colors for this site are taken from <a href="https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2">the Cobalt2 theme by Wes Bos</a>.
-      </p>
-    </footer>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjamin Davies</title>
+    <style>
+      :root {
+        font-family: sans-serif;
+        text-align: center;
+      }
 
-  <script type="module">
-    import { isGithub, titleCase, registerSW } from './shared.js';
+      main {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-    registerSW();
+      h1 {
+        font-size: 3em;
+        text-align: center;
+      }
 
-    const indexList = document.getElementById('indexList');
-    fetch('index.txt')
-      .then(res => res.text())
-      .then(text => {
-        indexList.children[0].remove();
+      .links a {
+        padding: 0.5em;
+      }
 
-        const files = text.split('\n');
-        for (const file of files) {
-          if (!file || file === 'index.html') {
-            continue;
-          }
-          const match = file.match(/^(.*)\.html$/);
-          if (!match) {
-            continue;
-          }
-          const short = match[1];
-          const display = titleCase(short);
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.textContent = display;
-          a.href = isGithub ? short : file;
-          li.appendChild(a);
-          indexList.appendChild(li);
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background-color: #333;
+          color: #fff;
         }
-      });
-  </script>
-</body>
+
+        a {
+          color: #aaf;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Benjamin Davies</h1>
+      <p>
+        My name is Benjamin Davies, but you can call me Ben.
+        <br />
+        I am a New Zealander 🥝 who enjoys making music 🎸🎷.
+      </p>
+      <p class="links">
+        <a href="https://github.com/Benjamin-Davies">GitHub</a>
+        <a href="https://www.linkedin.com/in/benjamin-davies-657234226/"
+          >LinkedIn</a
+        >
+        <a href="mailto:bentendavies@gmail.com">Email</a>
+      </p>
+    </main>
+  </body>
 </html>
