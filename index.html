@@ -4,74 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benjamin Davies</title>
+
+    <link rel="modulepreload" href="index.mjs" />
+    <link
+      rel="preload"
+      href="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=300"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=600"
+      as="image"
+      media="(resolution: 2x)"
+    />
+    <link
+      rel="preload"
+      href="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=900"
+      as="image"
+      media="(resolution: 3x)"
+    />
+    <link
+      rel="preload"
+      href="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=1200"
+      as="image"
+      media="(min-resolution: 4x)"
+    />
+
     <style>
-      :root {
-        font-family: sans-serif;
-        text-align: center;
+      body {
+        font-size: 1.4em;
+        background-color: #000;
+        color: #fff;
       }
 
       main {
-        font-size: 1.2em;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        max-width: 640px;
+        margin: 0 auto;
       }
 
-      img.circle {
-        border-radius: 50%;
-        height: 300px;
+      pre {
+        margin: 0;
+        text-wrap: wrap;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .html-tag {
+        color: #0e0;
+      }
+
+      .picture {
+        display: inline-block;
         width: 300px;
-        box-shadow: 0px 2px 3px #000a;
+        height: 300px;
+        margin: 0.5em 0 0;
+        background-color: #222;
       }
 
-      h1 {
-        text-align: center;
-      }
-
-      p {
-        max-width: 30em;
-      }
-
-      .links a {
-        padding: 0.5em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          background-color: #333;
-          color: #fff;
-        }
-
-        a {
-          color: #aaf;
-        }
+      .hide {
+        display: none;
       }
     </style>
   </head>
   <body>
     <main>
-      <img
-        class="circle"
-        src="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=300"
-        srcset="
-          https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=600 2x
-          https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=900 3x
-        "
-        alt="Picture of Me"
-      />
-      <h1>Benjamin Davies</h1>
-      <p>
-        I am a New Zealand&ndash;based&nbsp;🥝 Software Engineering
-        Student&nbsp;🧑‍💻 who enjoys making music&nbsp;🎸🎷.
-      </p>
-      <p class="links">
-        <a href="https://github.com/Benjamin-Davies">GitHub</a>
-        <a href="https://www.linkedin.com/in/benjamin-davies-657234226/"
-          >LinkedIn</a
-        >
-        <a href="mailto:bentendavies@gmail.com">Email</a>
-      </p>
+      <pre id="content" class="hide">
+<span class="html-tag">&lt;picture src="selfie.jpg"&gt;</span>
+  <img
+    class="picture"
+    src="https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=300"
+    srcset="
+      https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=600 2x
+      https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=900 3x
+      https://gravatar.com/avatar/1adbc2e5f0a7cd7d513886fabdbecf2306a49bef7de34393215f82cde8cfbd10?size=1200 4x
+    "
+    alt="Picture of Me"
+  />
+<span class="html-tag">&lt;/picture&gt;</span>
+
+<span class="html-tag">&lt;bio&gt;</span>
+  <span class="html-tag">&lt;h1&gt;</span><b>Benjamin Davies</b><span class="html-tag">&lt;/h1&gt;</span>
+
+  I am a New Zealand&ndash;based&nbsp;🥝 Software Engineering Student&nbsp;🧑‍💻
+  who enjoys making music&nbsp;🎸🎷.
+<span class="html-tag">&lt;/bio&gt;</span>
+
+<span class="html-tag">&lt;contact-info&gt;</span>
+  GitHub: <a href="https://github.com/Benjamin-Davies">@Benjamin-Davies</a>
+  LinkedIn: <a href="https://www.linkedin.com/in/benjamin-davies-657234226/">Benjamin Davies</a>
+  Email: <a href="mailto:bentendavies@gmail.com">bentendavies@gmail.com</a>
+<span class="html-tag">&lt;/contact-info&gt;</span>
+      </pre>
+      <script src="index.mjs" type="module"></script>
     </main>
   </body>
 </html>
