@@ -76,7 +76,7 @@ header h3 {
 }
 
 nav ul {
-  margin-top: 36px;
+  margin-top: 32px;
   padding: 0;
 
   list-style: none;
@@ -85,6 +85,7 @@ nav ul {
 }
 
 nav li {
+  margin-top: 4px;
   margin-right: 24px;
   display: inline-block;
 }
