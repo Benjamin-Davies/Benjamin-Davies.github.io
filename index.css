@@ -1,0 +1,110 @@
+:root {
+  --background: #fafafa;
+  --background-dim: #f5f5f5;
+  --foreground: #212121;
+  --primary: #2196f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-dim);
+  color: var(--foreground);
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.container {
+  margin: 48px auto;
+  padding: 48px;
+  max-width: 720px;
+
+  background-color: var(--background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
+}
+
+main {
+  padding-left: 30px;
+  padding-right: 24px;
+  border-left: 8px solid var(--primary);
+}
+
+header {
+  color: var(--primary);
+
+  line-height: 1;
+}
+
+header .picture {
+  margin: -12px 32px;
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+  float: right;
+
+  background-image: url(https://avatars.githubusercontent.com/u/25046874?v=4);
+  background-size: 128px 128px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 10%) inset;
+}
+
+header h1 {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+}
+
+header h3 {
+  margin-top: 20px;
+
+  font-weight: 300;
+  font-style: italic;
+  font-size: 28px;
+}
+
+nav ul {
+  margin-top: 36px;
+  padding: 0;
+
+  list-style: none;
+
+  line-height: 1;
+}
+
+nav li {
+  margin-right: 24px;
+  display: inline-block;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: var(--foreground);
+  font-size: 16px;
+}
+
+nav svg {
+  margin-right: 8px;
+  margin-bottom: -3px;
+}
+
+nav svg path {
+  fill: var(--foreground);
+}
+
+p {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
