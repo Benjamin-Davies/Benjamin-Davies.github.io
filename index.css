@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: var(--background-dim);
+  background-color: var(--background);
   color: var(--foreground);
 
   font-family: 'Roboto', sans-serif;
@@ -22,18 +22,7 @@ body {
 }
 
 .container {
-  margin: 48px auto;
   padding: 48px;
-  max-width: 720px;
-
-  background-color: var(--background);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
-}
-
-main {
-  padding-left: 30px;
-  padding-right: 24px;
-  border-left: 8px solid var(--primary);
 }
 
 header {
@@ -43,11 +32,10 @@ header {
 }
 
 header .picture {
-  margin: -12px 32px;
+  margin: 0 auto 24px;
   width: 128px;
   height: 128px;
   border-radius: 100%;
-  float: right;
 
   background-image: url(https://avatars.githubusercontent.com/u/25046874?v=4);
   background-size: 128px 128px;
@@ -107,4 +95,35 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  main {
+    padding-left: 30px;
+    padding-right: 24px;
+    border-left: 8px solid var(--primary);
+  }
+
+  header .picture {
+    margin: 0 0 24px;
+  }
+}
+
+@media (min-width: 816px) {
+  body {
+    background-color: var(--background-dim);
+  }
+
+  .container {
+    margin: 48px auto;
+    max-width: 720px;
+
+    background-color: var(--background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
+  }
+
+  header .picture {
+    margin: -12px 32px;
+    float: right;
+  }
 }
