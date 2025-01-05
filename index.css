@@ -1,8 +1,27 @@
 :root {
-  --background: #fafafa;
-  --background-dim: #f5f5f5;
-  --foreground: #212121;
-  --primary: #2196f3;
+  /* https://m1.material.io/style/color.html#color-color-tool */
+  --black: #000000;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-900: #212121;
+  --gray-950: #1a1a1a;
+  --blue-500: #2196f3;
+
+  --background-only: var(--gray-50);
+  --background-mid: var(--gray-50);
+  --background-back: var(--gray-100);
+  --foreground: var(--gray-900);
+  --primary: var(--blue-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-only: var(--black);
+    --background-mid: var(--gray-900);
+    --background-back: var(--gray-950);
+    --foreground: var(--gray-200);
+  }
 }
 
 * {
@@ -12,7 +31,7 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--background-only);
   color: var(--foreground);
 
   font-family: 'Roboto', sans-serif;
@@ -111,14 +130,14 @@ p:last-child {
 
 @media (min-width: 816px) {
   body {
-    background-color: var(--background-dim);
+    background-color: var(--background-back);
   }
 
   .container {
     margin: 48px auto;
     max-width: 720px;
 
-    background-color: var(--background);
+    background-color: var(--background-mid);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
   }
 
