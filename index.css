@@ -149,10 +149,6 @@ h2 svg path {
   fill: var(--foreground-dim);
 }
 
-h2 a:hover svg path {
-  fill: var(--foreground);
-}
-
 p {
   margin-top: 20px;
   margin-bottom: 24px;
