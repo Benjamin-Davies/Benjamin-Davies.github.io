@@ -145,8 +145,20 @@ h2 svg {
   margin-bottom: -1px;
 }
 
+@media (max-width: 815px) {
+  h2 svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -5px;
+  }
+}
+
 h2 svg path {
   fill: var(--foreground-dim);
+}
+
+h2 a {
+  text-decoration: none;
 }
 
 p {
