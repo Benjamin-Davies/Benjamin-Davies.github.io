@@ -1,8 +1,8 @@
 ---
-import Head from './Head.astro';
-import '../styles/index.css';
+import Head from "./Head.astro";
 
-const { ...props } = Astro.props;
+import "../styles/global.css";
+import "../styles/index.css";
 ---
 
 <html>
@@ -10,7 +10,9 @@ const { ...props } = Astro.props;
     <meta charset="utf-8" />
     <Head />
   </head>
-  <body>
+  <body
+    class="bg-gray-50 font-sans text-base font-light text-gray-900 md:bg-gray-100 dark:bg-black dark:text-gray-200 md:dark:bg-gray-950"
+  >
     <slot />
   </body>
 </html>

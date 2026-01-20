@@ -1,126 +1,23 @@
 :root {
-  /* https://m1.material.io/style/color.html#color-color-tool */
-  --black: #000000;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-700: #616161;
-  --gray-900: #212121;
-  --gray-950: #1a1a1a;
-  --blue-300: #64b5f6;
-  --blue-500: #2196f3;
-  --blue-700: #1976d2;
-
-  --background-only: var(--gray-50);
-  --background-mid: var(--gray-50);
-  --background-back: var(--gray-100);
-  --foreground: var(--gray-900);
-  --foreground-dim: var(--gray-700);
-  --primary: var(--blue-500);
-  --primary-bold: var(--blue-700);
+  --background-only: var(--color-gray-50);
+  --background-mid: var(--color-gray-50);
+  --background-back: var(--color-gray-100);
+  --foreground: var(--color-gray-900);
+  --foreground-dim: var(--color-gray-700);
+  --primary: var(--color-blue-500);
+  --primary-bold: var(--color-blue-700);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-only: var(--black);
-    --background-mid: var(--gray-900);
-    --background-back: var(--gray-950);
-    --foreground: var(--gray-200);
-    --foreground-dim: var(--gray-400);
-    --primary: var(--blue-500);
-    --primary-bold: var(--blue-300);
+    --background-only: var(--color-black);
+    --background-mid: var(--color-gray-900);
+    --background-back: var(--color-gray-950);
+    --foreground: var(--color-gray-200);
+    --foreground-dim: var(--color-gray-400);
+    --primary: var(--color-blue-500);
+    --primary-bold: var(--color-blue-300);
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--background-only);
-  color: var(--foreground);
-
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 18px;
-}
-
-.container {
-  padding: 48px;
-}
-
-main {
-  padding-bottom: 24px;
-  border-bottom: 8px solid var(--primary);
-}
-
-header {
-  color: var(--primary);
-
-  line-height: 1;
-}
-
-header .picture {
-  margin: 0 auto 24px;
-  width: 128px;
-  height: 128px;
-  border-radius: 100%;
-
-  background-image: url(https://avatars.githubusercontent.com/u/25046874?v=4);
-  background-size: 128px 128px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 10%) inset;
-}
-
-header h1 {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 56px;
-}
-
-header h3 {
-  margin-top: 20px;
-
-  font-weight: 300;
-  font-style: italic;
-  font-size: 28px;
-}
-
-nav ul {
-  margin-top: 32px;
-  padding: 0;
-
-  list-style: none;
-
-  line-height: 1;
-}
-
-nav li {
-  margin-top: 4px;
-  margin-right: 24px;
-  display: inline-block;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav a {
-  color: var(--foreground);
-  font-size: 16px;
-}
-
-nav svg {
-  margin-right: 8px;
-  margin-bottom: -3px;
-}
-
-nav svg path {
-  fill: var(--foreground);
 }
 
 section {
@@ -141,16 +38,15 @@ h2 .small {
   font-size: 18px;
 }
 
-h2 svg {
-  margin-bottom: -1px;
-}
-
 @media (max-width: 815px) {
   h2 svg {
     width: 24px;
     height: 24px;
-    margin-bottom: -5px;
   }
+}
+
+h2 svg {
+  display: inline-block;
 }
 
 h2 svg path {
@@ -174,7 +70,7 @@ p:last-child {
   display: inline-block;
   padding: 0 5px;
 
-  border: 1px solid var(--gray-500);
+  border: 1px solid var(--color-gray-500);
   border-radius: 100px;
 
   color: var(--foreground-dim);
@@ -189,29 +85,4 @@ picture img {
   height: auto;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
-}
-
-@media (min-width: 600px) {
-  header .picture {
-    margin: 0 0 24px;
-  }
-}
-
-@media (min-width: 816px) {
-  body {
-    background-color: var(--background-back);
-  }
-
-  .container {
-    margin: 48px auto;
-    max-width: 720px;
-
-    background-color: var(--background-mid);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
-  }
-
-  header .picture {
-    margin: -12px 32px;
-    float: right;
-  }
 }
