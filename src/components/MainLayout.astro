@@ -3,12 +3,18 @@ import Head from "./Head.astro";
 
 import "../styles/global.css";
 import "../styles/index.css";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
 ---
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <Head />
+    <Head {name} />
   </head>
   <body
     class="bg-gray-50 font-sans text-base font-light text-gray-900 md:bg-gray-100 dark:bg-black dark:text-gray-200 md:dark:bg-gray-950"
