@@ -17,10 +17,10 @@
   --color-blue-700: #1976d2;
 
   --text-*: initial;
-  --text-s: 16px;
+  --text-sm: 16px;
   --text-base: 18px;
-  --text-l: 28px;
-  --text-xl: 48px;
+  --text-lg: 28px;
+  --text-xl: 32px;
   --text-xxl: 56px;
 
   --font-*: initial;
@@ -29,6 +29,7 @@
   --font-weight-regular: 400;
 
   --shadow-*: initial;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 25%);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 25%);
   --inset-shadow-*: initial;
   --inset-shadow-md: 0 4px 4px rgba(0, 0, 0, 10%) inset;
