@@ -7,10 +7,12 @@
   "languages": {
     "Astro": {
       "tab_size": 2,
+      "format_on_save": "on",
     },
     "TypeScript": {
       "tab_size": 2,
+      "format_on_save": "on",
     },
-    "CSS": { "tab_size": 2 },
+    "CSS": { "tab_size": 2, "format_on_save": "on" },
   },
 }

@@ -34,3 +34,22 @@
   --inset-shadow-*: initial;
   --inset-shadow-md: 0 4px 4px rgba(0, 0, 0, 10%) inset;
 }
+
+.my-list-content a {
+  color: var(--color-blue-700);
+}
+
+.my-list-content a:focus {
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+}
+
+.my-list-content a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .my-list-content a {
+    color: var(--color-blue-300);
+  }
+}
