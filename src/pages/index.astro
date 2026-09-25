@@ -2,133 +2,218 @@
 import MainLayout from "../components/MainLayout.astro";
 
 const name = "Ben Davies";
-
-const profileLinks = [
-  {
-    label: "GitHub profile",
-    username: "Benjamin-Davies",
-    href: "https://github.com/Benjamin-Davies",
-    // from https://github.com/primer/octicons
-    iconPath:
-      "M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z",
-  },
-  {
-    label: "LinkedIn profile",
-    username: "Benjamin Davies",
-    href: "https://www.linkedin.com/in/benjamin-davies-657234226/",
-    // from the GitHub website
-    iconPath:
-      "M14.5455 0H1.45455C0.650909 0 0 0.650909 0 1.45455V14.5455C0 15.3491 0.650909 16 1.45455 16H14.5455C15.3491 16 16 15.3491 16 14.5455V1.45455C16 0.650909 15.3491 0 14.5455 0ZM5.05746 13.0909H2.912V6.18764H5.05746V13.0909ZM3.96291 5.20073C3.27127 5.20073 2.712 4.64 2.712 3.94982C2.712 3.25964 3.272 2.69964 3.96291 2.69964C4.65236 2.69964 5.21309 3.26036 5.21309 3.94982C5.21309 4.64 4.65236 5.20073 3.96291 5.20073ZM13.0938 13.0909H10.9498V9.73382C10.9498 8.93309 10.9353 7.90327 9.83491 7.90327C8.71855 7.90327 8.54691 8.77527 8.54691 9.67564V13.0909H6.40291V6.18764H8.46109V7.13091H8.49018C8.77673 6.58836 9.47636 6.016 10.52 6.016C12.6924 6.016 13.0938 7.44582 13.0938 9.30473V13.0909V13.0909Z",
-  },
-  {
-    label: "email address",
-    username: "bentendavies@gmail.com",
-    href: "mailto:bentendavies@gmail.com",
-    // from https://github.com/primer/octicons
-    iconPath:
-      "M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z",
-  },
-];
 ---
 
 <MainLayout {name}>
   <div
-    class="container p-12 md:mx-auto md:my-12 md:max-w-180 md:bg-gray-50 md:shadow-md md:dark:bg-gray-900"
+    class="md:bg-base md:border-border container p-2 md:mx-auto md:my-4 md:max-w-240 md:border-[1px]"
   >
-    <main class="-mb-5">
-      <header class="leading-none text-blue-500">
-        <div
-          class="relative mx-auto mt-0 mb-6 h-32 w-32 overflow-clip rounded-full sm:mx-0 md:float-right md:mx-8 md:-my-3"
-        >
-          <img
-            class="absolute top-0 right-0 bottom-0 left-0"
-            src="https://avatars.githubusercontent.com/u/25046874?v=4"
-            alt="photograph of me"
-          />
-          <div
-            class="inset-shadow-md absolute top-0 right-0 bottom-0 left-0 rounded-full"
-          >
-          </div>
-        </div>
-        <h1 class="font-regular text-xxl">{name}</h1>
-        <h3 class="mt-5 text-lg font-light italic">Software Engineer</h3>
-      </header>
-      <nav>
-        <ul class="mt-8 list-none p-0 leading-none">
-          {
-            profileLinks.map((link) => (
-              <li class="mt-1 mr-6 inline-block last:mr-0">
-                <a
-                  href={link.href}
-                  class="text-sm text-gray-900 dark:text-gray-200"
-                  aria-label={`Link to my ${link.label}`}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    height="16"
-                    class="mr-1.5 mb-0.5 inline-block align-middle"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d={link.iconPath}
-                      class="fill-gray-900 dark:fill-gray-200"
-                    />
-                  </svg>
-                  {link.username}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <p class="my-5">
-        I am a Software Engineer who is curious, principled, loves problem
-        solving and has an eye for detail. Outside of work I am intrigued by a
-        variety of things, from computers and mathematics to music and
-        phonology.
+    <header>
+      <p class="select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~$</span>
+        <span class="text-green">whoami</span>
       </p>
-      <p class="my-5">
-        Now that I mention it, I've already found work, so a portfolio site
-        doesn't seem that useful. Instead, here's a short list of computery
-        things that I think are pretty cool and deserve more attention:
+      <h1 class="text-3xl">Ben Davies</h1>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~$</span>
+        <span class="text-green">groups</span>
       </p>
-      <ul class="my-list-content my-5 ml-5 list-disc">
+      <h2 class="text-lg">software-engineer musician tinkerer</h2>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~$</span>
+        <span class="text-green">cat</span> .git-credentials
+      </p>
+      <p>bachelor-of-engineering:hons@canterbury.ac.nz</p>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~$</span>
+        <span class="text-green">cat</span> bookmarks.md
+      </p>
+      <ul>
         <li>
-          <a href="https://github.com/actix/actix?tab=readme-ov-file">Actix</a> is
-          an actor framework for Rust. I think that actors are a nice abstraction
+          - <a class="underline" href="https://github.com/Benjamin-Davies"
+            >Benjamin-Davies</a
+          > on GitHub
+        </li>
+        <li>
+          - <a
+            class="underline"
+            href="https://www.linkedin.com/in/benjamin-davies-657234226"
+            >Benjamin Davies</a
+          > on LinkedIn
+        </li>
+        <li>
+          - Email me at <a
+            class="underline"
+            href="mailto:bentendavies@gmail.com">bentendavies@gmail.com</a
+          >
+        </li>
+      </ul>
+    </header>
+    <section>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~$</span>
+        <span class="text-green">cd</span> experience/ &&
+        <span class="text-green">jj</span> log
+      </p>
+      <h3 class="font-bold">
+        <span aria-hidden>
+          <span class="text-green">@&nbsp;</span>
+          <span class="text-pink">wy</span><span class="text-text2">vyuqxt</span
+          >
+        </span>
+        <span class="text-yellow">Allied Telesis Labs</span>
+        <span class="text-cyan">Jan 2026 - present</span>
+        <span class="text-pink">main</span>
+      </h3>
+      <p>
+        <span aria-hidden>│&nbsp;</span>
+        <span class="font-bold">
+          Platform support for <a
+            class="underline"
+            href="https://www.alliedtelesis.com/nz/en/about/technology/alliedware-plus"
+            >AlliedWare Plus</a
+          >
+          (embedded Linux, C)
+        </span>
+      </p>
+      <h3>
+        <span aria-hidden>
+          │ ○&nbsp;
+          <span class="text-pink font-bold">u</span><span class="text-text2"
+            >wurqsqw</span
+          >
+        </span>
+        <span class="text-yellow">University of Canterbury</span>
+        <span class="text-cyan">Mar 2025 - Oct 2025</span>
+        <span class="text-pink">final-year-project</span>
+      </h3>
+      <p>
+        <span aria-hidden>│ │&nbsp;</span>
+        ML Signal Processing for <a
+          class="underline"
+          href="https://doi.org/10.1109/APMC60911.2024.10867297"
+          >Harmonic Radar</a
+        >
+        (Tensorflow, Rust)
+      </p>
+      <h3>
+        <span aria-hidden><span class="text-light-blue">◆</span> │&nbsp;</span>
+        <span class="text-pink font-bold">x</span><span class="text-text2"
+          >wrvtxtv</span
+        >
+        <span class="text-yellow">Allied Telesis Labs</span>
+        <span class="text-cyan">Nov 2024 - Feb 2025</span>
+        <span class="text-pink">internship</span>
+      </h3>
+      <p>
+        <span aria-hidden>├─╯&nbsp;</span> Automation for testing network switches
+        (Django, Openflow)
+      </p>
+      <h3>
+        <span aria-hidden>
+          <span class="text-light-blue">◆&nbsp;</span>
+          <span class="text-pink font-bold">ww</span><span class="text-text2"
+            >rwxsqu</span
+          >
+        </span>
+        <span class="text-yellow">University of Canterbury</span>
+        <span class="text-cyan">Nov 2023 - Feb 2024</span>
+      </h3>
+      <p>
+        <span aria-hidden>│&nbsp;</span>
+        <a
+          class="underline"
+          href="https://web.archive.org/web/20240224013548/https://www.findapest.nz/"
+          >Find-A-Pest</a
+        > migration (Kubernetes, AWS)
+      </p>
+      <h3>
+        <span aria-hidden>
+          <span class="text-light-blue">◆&nbsp;</span>
+          <span class="text-pink font-bold">z</span><span class="text-text2"
+            >xrrvyqs</span
+          >
+        </span>
+        <span class="text-yellow">University of Canterbury</span>
+        <span class="text-cyan">Nov 2022 - Feb 2023</span>
+      </h3>
+      <p>
+        <span aria-hidden>│&nbsp;</span>
+        <a class="underline" href="https://bugz.ento.org.nz/">BUGZ</a> rewrite (C#,
+        Angular)
+      </p>
+      <p>~</p>
+    </section>
+    <section>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~/experience$</span>
+        <span class="text-green">cd</span> ../awesome/ &&
+        <span class="text-green">cat</span> README.md
+      </p>
+      <ul>
+        <li>
+          <span class="select-none" aria-hidden>- </span>
+          <a
+            class="underline"
+            href="https://github.com/actix/actix?tab=readme-ov-file">Actix</a
+          > is an actor framework for Rust. I think that actors are a nice abstraction
           for stateful asynchronous programs. They also lend themselves to fault tolerant
           architectures, but I haven't used them for that yet.
         </li>
         <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Gecko"
+          <span class="select-none" aria-hidden>- </span>
+          <a
+            class="underline"
+            href="https://developer.mozilla.org/en-US/docs/Glossary/Gecko"
             >Gecko</a
           > is one of the last remaining browser engines. I think monopolies are bad,
           so why not take a small step to reduce Chromium's market share.
         </li>
         <li>
-          <a href="https://www.jj-vcs.dev/latest/">Jujutsu</a> is a Git-compatible
-          VCS. I especially like how it allows me to just make my changes without
-          having to worry too much about what branch I'm on. It also makes squashing
-          and rebasing a breeze.
+          <span class="select-none" aria-hidden>- </span>
+          <a class="underline" href="https://www.jj-vcs.dev/latest/">Jujutsu</a> is
+          a Git-compatible VCS. I especially like how it allows me to just make my
+          changes without having to worry too much about what branch I'm on. It also
+          makes squashing and rebasing a breeze.
         </li>
         <li>
-          <a href="https://github.com/Benjamin-Davies/nestor">Nestor</a> is prototype
-          C language server (made by me). It ignores a lot of the weirdness of C in
-          exchange for working well with large projects, or at least that's the plan.
+          <span class="select-none" aria-hidden>- </span>
+          <a class="underline" href="https://github.com/Benjamin-Davies/nestor"
+            >Nestor</a
+          > is prototype C language server (made by me). It ignores a lot of the weirdness
+          of C in exchange for working well with large projects, or at least that's
+          the plan.
         </li>
         <li>
-          <a href="https://oracle.github.io/opengrok/">OpenGrok</a> is a source code
-          search engine. I find it quite useful for searching large C codebases. Who
-          would've thought that Oracle could make something I choose to use.
+          <span class="select-none" aria-hidden>- </span>
+          <a class="underline" href="https://oracle.github.io/opengrok/"
+            >OpenGrok</a
+          > is a source code search engine. I find it quite useful for searching large
+          C codebases. Who would've thought that Oracle could make something I choose
+          to use.
         </li>
         <li>
-          <a href="https://zed.dev/">Zed</a> is a snappy modern code editor. I mostly
-          use it for the responsiveness and the clean aesthetic, but they also have
-          a bunch of collaboration and AI features.
+          <span class="select-none" aria-hidden>- </span>
+          <a class="underline" href="https://zed.dev/">Zed</a> is a snappy modern
+          code editor. I mostly use it for the responsiveness and the clean aesthetic,
+          but they also have a bunch of collaboration and AI features.
         </li>
       </ul>
-    </main>
+    </section>
+    <footer>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~/awesome$</span>
+        <span class="text-green">cat</span> ~/.config/colors.cfg
+      </p>
+      <p>
+        Colours from Catppuccin
+        <span class="dark:hidden">Late</span>
+        <span class="not-dark:hidden">Mocha</span>
+      </p>
+      <p class="mt-4 select-none" aria-hidden>
+        <span class="text-cyan">bend@bend.nz:~/awesome$</span>
+        <span class="text-green">exit</span>
+      </p>
+    </footer>
   </div>
 </MainLayout>
