@@ -1,0 +1,29 @@
+---
+interface Props {
+  first?: boolean;
+  path?: string;
+  command: string;
+}
+
+const { first, path, command } = Astro.props;
+
+let firstPart = true;
+const commandParts = command.split(" ").map((s) => {
+  const part = { s, firstPart };
+  firstPart = s === "&&";
+  return part;
+});
+---
+
+<p class:list={["select-none", { "mt-4": !first }]} aria-hidden>
+  <span class="text-cyan">bend@bend.nz:{path ?? "~"}$ </span>
+  {
+    commandParts.map(({ s, firstPart }) => {
+      if (firstPart) {
+        return <span class="text-green">{s} </span>;
+      } else {
+        return s + " ";
+      }
+    })
+  }
+</p>

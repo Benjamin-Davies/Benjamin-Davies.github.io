@@ -1,221 +1,195 @@
 ---
+import CommandLine from "../components/CommandLine.astro";
 import MainLayout from "../components/MainLayout.astro";
 
 const name = "Ben Davies";
 ---
 
 <MainLayout {name}>
-  <div
-    class="md:bg-base md:border-border container p-2 md:mx-auto md:my-4 md:max-w-240 md:border-[1px]"
-  >
-    <header>
-      <p class="select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~$</span>
-        <span class="text-green">whoami</span>
-      </p>
-      <h1 class="text-3xl">Ben Davies</h1>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~$</span>
-        <span class="text-green">groups</span>
-      </p>
-      <h2 class="text-lg">software-engineer musician tinkerer</h2>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~$</span>
-        <span class="text-green">cat</span> .git-credentials
-      </p>
-      <p>bachelor-of-engineering:hons@canterbury.ac.nz</p>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~$</span>
-        <span class="text-green">cat</span> bookmarks.md
-      </p>
-      <ul>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a class="underline" href="https://github.com/Benjamin-Davies"
-            >Benjamin-Davies</a
-          > on GitHub
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
+  <div class="container flex flex-col md:mx-auto md:max-w-240 md:p-4">
+    <main class="md:bg-base md:border-border p-2 md:border-[1px]">
+      <header>
+        <CommandLine first command="whoami" />
+        <h1 class="text-3xl">Ben Davies</h1>
+        <CommandLine command="groups" />
+        <h2 class="text-lg">software-engineer musician tinkerer</h2>
+        <CommandLine command="cat .git-credentials" />
+        <p>bachelor-of-engineering:hons@canterbury.ac.nz</p>
+        <CommandLine command="cat bookmarks.md" />
+        <ul class="list-hyphen">
+          <li>
+            <a class="underline" href="https://github.com/Benjamin-Davies"
+              >Benjamin-Davies</a
+            > on GitHub
+          </li>
+          <li>
+            <a
+              class="underline"
+              href="https://www.linkedin.com/in/benjamin-davies-657234226"
+              >Benjamin Davies</a
+            > on LinkedIn
+          </li>
+          <li>
+            Email me at <a
+              class="underline"
+              href="mailto:bentendavies@gmail.com">bentendavies@gmail.com</a
+            >
+          </li>
+        </ul>
+      </header>
+      <section>
+        <CommandLine command="cd experience/ && jj log" />
+        <h3 class="font-bold">
+          <span aria-hidden>
+            <span class="text-green">@&nbsp;</span>
+            <span class="text-pink">wy</span><span class="text-text2"
+              >vyuqxt</span
+            >
+          </span>
+          <span class="text-yellow">Allied Telesis Labs</span>
+          <span class="text-cyan">Jan 2026 - present</span>
+          <span class="text-pink">main</span>
+        </h3>
+        <p>
+          <span aria-hidden>│&nbsp;</span>
+          <span class="font-bold">
+            Platform support for <a
+              class="underline"
+              href="https://www.alliedtelesis.com/nz/en/about/technology/alliedware-plus"
+              >AlliedWare Plus</a
+            >
+            (embedded Linux, C)
+          </span>
+        </p>
+        <h3>
+          <span aria-hidden>
+            │ ○&nbsp;
+            <span class="text-pink font-bold">u</span><span class="text-text2"
+              >wurqsqw</span
+            >
+          </span>
+          <span class="text-yellow">University of Canterbury</span>
+          <span class="text-cyan">Mar 2025 - Oct 2025</span>
+          <span class="text-pink">final-year-project</span>
+        </h3>
+        <p>
+          <span aria-hidden>│ │&nbsp;</span>
+          ML Signal Processing for <a
+            class="underline"
+            href="https://doi.org/10.1109/APMC60911.2024.10867297"
+            >Harmonic Radar</a
+          >
+          (Tensorflow, Rust)
+        </p>
+        <h3>
+          <span aria-hidden><span class="text-light-blue">◆</span> │&nbsp;</span
+          >
+          <span class="text-pink font-bold">x</span><span class="text-text2"
+            >wrvtxtv</span
+          >
+          <span class="text-yellow">Allied Telesis Labs</span>
+          <span class="text-cyan">Nov 2024 - Feb 2025</span>
+          <span class="text-pink">internship</span>
+        </h3>
+        <p>
+          <span aria-hidden>├─╯&nbsp;</span> Automation for testing network switches
+          (Django, Openflow)
+        </p>
+        <h3>
+          <span aria-hidden>
+            <span class="text-light-blue">◆&nbsp;</span>
+            <span class="text-pink font-bold">ww</span><span class="text-text2"
+              >rwxsqu</span
+            >
+          </span>
+          <span class="text-yellow">University of Canterbury</span>
+          <span class="text-cyan">Nov 2023 - Feb 2024</span>
+        </h3>
+        <p>
+          <span aria-hidden>│&nbsp;</span>
           <a
             class="underline"
-            href="https://www.linkedin.com/in/benjamin-davies-657234226"
-            >Benjamin Davies</a
-          > on LinkedIn
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          Email me at <a class="underline" href="mailto:bentendavies@gmail.com"
-            >bentendavies@gmail.com</a
-          >
-        </li>
-      </ul>
-    </header>
-    <section>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~$</span>
-        <span class="text-green">cd</span> experience/ &&
-        <span class="text-green">jj</span> log
-      </p>
-      <h3 class="font-bold">
-        <span aria-hidden>
-          <span class="text-green">@&nbsp;</span>
-          <span class="text-pink">wy</span><span class="text-text2">vyuqxt</span
-          >
-        </span>
-        <span class="text-yellow">Allied Telesis Labs</span>
-        <span class="text-cyan">Jan 2026 - present</span>
-        <span class="text-pink">main</span>
-      </h3>
-      <p>
-        <span aria-hidden>│&nbsp;</span>
-        <span class="font-bold">
-          Platform support for <a
-            class="underline"
-            href="https://www.alliedtelesis.com/nz/en/about/technology/alliedware-plus"
-            >AlliedWare Plus</a
-          >
-          (embedded Linux, C)
-        </span>
-      </p>
-      <h3>
-        <span aria-hidden>
-          │ ○&nbsp;
-          <span class="text-pink font-bold">u</span><span class="text-text2"
-            >wurqsqw</span
-          >
-        </span>
-        <span class="text-yellow">University of Canterbury</span>
-        <span class="text-cyan">Mar 2025 - Oct 2025</span>
-        <span class="text-pink">final-year-project</span>
-      </h3>
-      <p>
-        <span aria-hidden>│ │&nbsp;</span>
-        ML Signal Processing for <a
-          class="underline"
-          href="https://doi.org/10.1109/APMC60911.2024.10867297"
-          >Harmonic Radar</a
-        >
-        (Tensorflow, Rust)
-      </p>
-      <h3>
-        <span aria-hidden><span class="text-light-blue">◆</span> │&nbsp;</span>
-        <span class="text-pink font-bold">x</span><span class="text-text2"
-          >wrvtxtv</span
-        >
-        <span class="text-yellow">Allied Telesis Labs</span>
-        <span class="text-cyan">Nov 2024 - Feb 2025</span>
-        <span class="text-pink">internship</span>
-      </h3>
-      <p>
-        <span aria-hidden>├─╯&nbsp;</span> Automation for testing network switches
-        (Django, Openflow)
-      </p>
-      <h3>
-        <span aria-hidden>
-          <span class="text-light-blue">◆&nbsp;</span>
-          <span class="text-pink font-bold">ww</span><span class="text-text2"
-            >rwxsqu</span
-          >
-        </span>
-        <span class="text-yellow">University of Canterbury</span>
-        <span class="text-cyan">Nov 2023 - Feb 2024</span>
-      </h3>
-      <p>
-        <span aria-hidden>│&nbsp;</span>
-        <a
-          class="underline"
-          href="https://web.archive.org/web/20240224013548/https://www.findapest.nz/"
-          >Find-A-Pest</a
-        > migration (Kubernetes, AWS)
-      </p>
-      <h3>
-        <span aria-hidden>
-          <span class="text-light-blue">◆&nbsp;</span>
-          <span class="text-pink font-bold">z</span><span class="text-text2"
-            >xrrvyqs</span
-          >
-        </span>
-        <span class="text-yellow">University of Canterbury</span>
-        <span class="text-cyan">Nov 2022 - Feb 2023</span>
-      </h3>
-      <p>
-        <span aria-hidden>│&nbsp;</span>
-        <a class="underline" href="https://bugz.ento.org.nz/">BUGZ</a> rewrite (C#,
-        Angular)
-      </p>
-      <p>~</p>
-    </section>
-    <section>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~/experience$</span>
-        <span class="text-green">cd</span> ../awesome/ &&
-        <span class="text-green">cat</span> README.md
-      </p>
-      <ul>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a
-            class="underline"
-            href="https://github.com/actix/actix?tab=readme-ov-file">Actix</a
-          > is an actor framework for Rust. I think that actors are a nice abstraction
-          for stateful asynchronous programs. They also lend themselves to fault tolerant
-          architectures, but I haven't used them for that yet.
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a
-            class="underline"
-            href="https://developer.mozilla.org/en-US/docs/Glossary/Gecko"
-            >Gecko</a
-          > is one of the last remaining browser engines. I think monopolies are bad,
-          so why not take a small step to reduce Chromium's market share.
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a class="underline" href="https://www.jj-vcs.dev/latest/">Jujutsu</a> is
-          a Git-compatible VCS. I especially like how it allows me to just make my
-          changes without having to worry too much about what branch I'm on. It also
-          makes squashing and rebasing a breeze.
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a class="underline" href="https://github.com/Benjamin-Davies/nestor"
-            >Nestor</a
-          > is prototype C language server (made by me). It ignores a lot of the weirdness
-          of C in exchange for working well with large projects, or at least that's
-          the plan.
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a class="underline" href="https://oracle.github.io/opengrok/"
-            >OpenGrok</a
-          > is a source code search engine. I find it quite useful for searching large
-          C codebases. Who would've thought that Oracle could make something I choose
-          to use.
-        </li>
-        <li>
-          <span class="select-none" aria-hidden>- </span>
-          <a class="underline" href="https://zed.dev/">Zed</a> is a snappy modern
-          code editor. I mostly use it for the responsiveness and the clean aesthetic,
-          but they also have a bunch of collaboration and AI features.
-        </li>
-      </ul>
-    </section>
-    <footer>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~/awesome$</span>
-        <span class="text-green">cat</span> ~/.config/colors.cfg
-      </p>
-      <p>
-        Colours from Catppuccin
-        <span class="dark:hidden">Late</span>
-        <span class="not-dark:hidden">Mocha</span>
-      </p>
-      <p class="mt-4 select-none" aria-hidden>
-        <span class="text-cyan">bend@bend.nz:~/awesome$</span>
-        <span class="text-green">exit</span>
-      </p>
-    </footer>
+            href="https://web.archive.org/web/20240224013548/https://www.findapest.nz/"
+            >Find-A-Pest</a
+          > migration (Kubernetes, AWS)
+        </p>
+        <h3>
+          <span aria-hidden>
+            <span class="text-light-blue">◆&nbsp;</span>
+            <span class="text-pink font-bold">z</span><span class="text-text2"
+              >xrrvyqs</span
+            >
+          </span>
+          <span class="text-yellow">University of Canterbury</span>
+          <span class="text-cyan">Nov 2022 - Feb 2023</span>
+        </h3>
+        <p>
+          <span aria-hidden>│&nbsp;</span>
+          <a class="underline" href="https://bugz.ento.org.nz/">BUGZ</a> rewrite (C#,
+          Angular)
+        </p>
+        <p>~</p>
+      </section>
+      <section>
+        <CommandLine
+          path="~/experience"
+          command="cd ../awesome/ && cat README.md"
+        />
+        <ul class="list-hyphen">
+          <li>
+            <a
+              class="underline"
+              href="https://github.com/actix/actix?tab=readme-ov-file">Actix</a
+            > is an actor framework for Rust. I think that actors are a nice abstraction
+            for stateful asynchronous programs. They also lend themselves to fault
+            tolerant architectures, but I haven't used them for that yet.
+          </li>
+          <li>
+            <a
+              class="underline"
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Gecko"
+              >Gecko</a
+            > is one of the last remaining browser engines. I think monopolies are
+            bad, so why not take a small step to reduce Chromium's market share.
+          </li>
+          <li>
+            <a class="underline" href="https://www.jj-vcs.dev/latest/"
+              >Jujutsu</a
+            > is a Git-compatible VCS. I especially like how it allows me to just
+            make my changes without having to worry too much about what branch I'm
+            on. It also makes squashing and rebasing a breeze.
+          </li>
+          <li>
+            <a
+              class="underline"
+              href="https://github.com/Benjamin-Davies/nestor">Nestor</a
+            > is prototype C language server (made by me). It ignores a lot of the
+            weirdness of C in exchange for working well with large projects, or at
+            least that's the plan.
+          </li>
+          <li>
+            <a class="underline" href="https://oracle.github.io/opengrok/"
+              >OpenGrok</a
+            > is a source code search engine. I find it quite useful for searching
+            large C codebases. Who would've thought that Oracle could make something
+            I choose to use.
+          </li>
+          <li>
+            <a class="underline" href="https://zed.dev/">Zed</a> is a snappy modern
+            code editor. I mostly use it for the responsiveness and the clean aesthetic,
+            but they also have a bunch of collaboration and AI features.
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <CommandLine path="~/awesome" command="cat ~/.config/colors.cfg" />
+        <p>
+          Colours from Catppuccin
+          <span class="dark:hidden">Late</span>
+          <span class="not-dark:hidden">Mocha</span>
+        </p>
+        <CommandLine path="~/awesome" command="exit" />
+      </footer>
+    </main>
   </div>
 </MainLayout>
