@@ -1,11 +1,11 @@
 ---
 interface Props {
-  first?: boolean;
   path?: string;
   command: string;
+  title?: string;
 }
 
-const { first, path, command } = Astro.props;
+const { path, command, title } = Astro.props;
 
 let firstPart = true;
 const commandParts = command.split(" ").map((s) => {
@@ -15,7 +15,8 @@ const commandParts = command.split(" ").map((s) => {
 });
 ---
 
-<p class:list={["select-none", { "mt-4": !first }]} aria-hidden>
+{title && <h2 aria-label={title} />}
+<p class="mt-4 select-none" aria-hidden>
   <span class="text-cyan">bend@bend.nz:{path ?? "~"}$ </span>
   {
     commandParts.map(({ s, firstPart }) => {

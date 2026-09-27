@@ -18,9 +18,12 @@ const name = "Ben Davies";
         <h1 class="text-3xl">Ben Davies</h1>
         <CommandLine command="groups" />
         <h2 class="text-lg">software-engineer musician tinkerer</h2>
-        <CommandLine command="cat .git-credentials" />
+        <CommandLine
+          command="cat .git-credentials"
+          title="Academic Credentials"
+        />
         <p>bachelor-of-engineering:hons@canterbury.ac.nz</p>
-        <CommandLine command="cat bookmarks.md" />
+        <CommandLine command="cat bookmarks.md" title="Links" />
         <ul class="list-hyphen">
           <li>
             <a class="underline" href="https://github.com/Benjamin-Davies"
@@ -43,13 +46,14 @@ const name = "Ben Davies";
         </ul>
       </header>
       <section>
-        <CommandLine command="cd experience/ && jj log" />
+        <CommandLine command="cd experience/ && jj log" title="Experience" />
         <Experience />
       </section>
       <section>
         <CommandLine
           path="~/experience"
           command="cd ../awesome/ && cat README.md"
+          title="Awesome Stuff"
         />
         <Awesome />
       </section>
