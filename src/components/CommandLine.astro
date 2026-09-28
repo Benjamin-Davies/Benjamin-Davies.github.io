@@ -15,7 +15,7 @@ const commandParts = command.split(" ").map((s) => {
 });
 ---
 
-{title && <h2 aria-label={title} />}
+{title && <h2 class="sr-only">{title}</h2>}
 <p class="mt-4 select-none" aria-hidden>
   <span class="text-cyan">bend@bend.nz:{path ?? "~"}$ </span>
   {
