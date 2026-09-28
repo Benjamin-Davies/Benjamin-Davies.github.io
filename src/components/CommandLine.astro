@@ -17,7 +17,9 @@ const commandParts = command.split(" ").map((s) => {
 
 {title && <h2 class="sr-only">{title}</h2>}
 <p class="mt-4 select-none" aria-hidden>
-  <span class="text-cyan">bend@bend.nz:{path ?? "~"}$ </span>
+  <span class="text-cyan">
+    <span class="hidden md:inline">bend@bend.nz:{path ?? "~"}</span>$
+  </span>
   {
     commandParts.map(({ s, firstPart }) => {
       if (firstPart) {
